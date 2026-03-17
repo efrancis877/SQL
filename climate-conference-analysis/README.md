@@ -58,17 +58,3 @@ Contains hotel information, including:
 - Business-focused data analysis
 
 ---
-
-## Business Questions and SQL Queries
-
-### Question 1: Which VIPs are speaking at events and what type of events are they presenting at?
-
-```sql
-SELECT 
-    v.first_name,
-    v.last_name,
-    e.event_name,
-    e.event_type
-FROM vips v
-JOIN events e ON v.event = e.event_id
-WHERE v.event IS NOT NULL;
